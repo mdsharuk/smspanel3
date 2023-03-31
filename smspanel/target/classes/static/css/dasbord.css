@@ -1,0 +1,55 @@
+.sideber{
+    width: 18%;
+    background: darkslategrey;
+    height: 100%;
+    position: fixed;
+    padding-top: 45px;
+
+}
+.sideber a{
+    display: block;
+    width: 100%;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: silver;
+    font-size: 17px;
+}
+.sideber a:hover{
+    background: #FFFFFF;
+    color: cadetblue;
+}
+.footer_divider{
+    height: 1.5px;
+    width: 100%;
+    background: beige;
+}
+.content{
+    margin-left: 18%;
+}
+.dasbord_contant{
+    padding: 0;
+    margin: 0;
+}
+.dasbord_header h1 {
+    font-size: 31px;
+    font-family: 'Open Sans', sans-serif;
+    background: bisque;
+    text-align: center;
+}
+.dashboard_contant_body{
+    max-width: 992px;
+    margin: auto;
+    padding-top: 45px;
+}
+.dashbord_header{
+    background: cadetblue;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 3px 5px 19px;
+}
+.dashbord_header h1{
+    font-size: 23px;
+    font-family: initial;
+}
+

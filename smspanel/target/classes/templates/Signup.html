@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+      th:replace="Base::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<section class="signup">
+  <div class="signup-container">
+    <div class="loging_from">
+      <h1>Please Create Your Account </h1>
+    </div>
+    <div class="from">
+      <form th:action="@{/signup}" th:method="post" th:object="${smspanel}">
+
+
+        <div class="text_field">
+          <input type="email" placeholder="Please Enter Your Email" th:field="*{email}">
+          <label>Email</label>
+        </div>
+        <div class="text_field">
+          <input type="password" placeholder="Please Enter your Password" th:field="*{password}">
+          <label>Password</label>
+        </div>
+
+
+        <div class="sub-nav">Forgot Password ??</div>
+        <div class="submit">
+          <input type="submit" value="Create Your Account">
+        </div>
+        <div class="singup">
+          <a th:href="@{/home}">Back</a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>

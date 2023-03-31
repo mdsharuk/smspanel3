@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+      th:replace="Base::Layout(~{::section})">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<section class="signup">
+    <div class="signup-container">
+        <div class="loging_from">
+            <h1>Reset Your Password</h1>
+        </div>
+        <div class="from">
+            <form class="login-from"  th:action="@{/change-password}" method="post">
+
+               <div class="sms">
+               </div>
+
+                <div class="text_field">
+                    <input required="required" type="email" name="email" placeholder="Enter your Email " >
+                    <label>Email</label>
+                </div>
+
+                <button type="submit" class="btn btn-warning">Send OTP</button>
+
+            </form>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>

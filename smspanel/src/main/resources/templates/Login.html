@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/"
+      th:replace="Base::Layout(~{::section})">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<section class="signup">
+  <div class="signup-container">
+    <div class="loging_from">
+      <h1>Login Information</h1>
+    </div>
+    <div class="from">
+      <form class="login-from" th:action="@{/do_login}" action="#" method="post">
+        <div th:if="${param.error}" class="alert alert-danger ">
+             Invalid username and password
+        </div>
+        <div th:if="${param.logout}" class="alert alert-success">
+              You have been logout
+        </div>
+        <div class="text_field">
+          <input type="email" name="username" placeholder="Enter your email" >
+          <label>Email</label>
+        </div>
+        <div class="text_field">
+          <input type="password"name="password" placeholder="Enter your password" >
+          <label>Password</label>
+        </div>
+        <div class="sub-nav">
+          <a th:href="@{/resetpassword}">Forgot Password ??</a>
+        </div>
+        <div class="submit">
+          <input type="submit" value="Login">
+        </div>
+        <div class="singup">
+          Not A Member ?? <a th:href="@{/signup}">SingUp</a>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
